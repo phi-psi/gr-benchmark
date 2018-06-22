@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 from gnuradio import gr, blocks, digital, analog
 import random, numpy

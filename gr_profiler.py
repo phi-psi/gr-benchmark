@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 import sys, subprocess, os, re, shlex
 import argparse
 from argparse import ArgumentParser
@@ -152,7 +152,7 @@ def main():
     if(options.dw):
         print "executing GR waveform benchmarks ..."
         results_fname = "profile_results.dat"
-        wfstdout = shellexec_getout("python benchmarking.py -F gr_profiler.json -o %s"%(results_fname),print_err=True)
+        wfstdout = shellexec_getout("python2 benchmarking.py -F gr_profiler.json -o %s"%(results_fname),print_err=True)
         with open(results_fname,"rb") as fp:
             wfperf = pickle.load(fp)
         wfperf = json.dumps(wfperf)
